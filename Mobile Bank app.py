@@ -45,20 +45,6 @@ if 'username' not in st.session_state:
 
 # ---------------------------
 # Login Function
-def login():
-    st.markdown('<div class="title-style">Investors Bank 💼</div>', unsafe_allow_html=True)
-    st.subheader("Login to your secure account")
-
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
-    if st.button("Login"):
-        if username in users_db and users_db[username] == password:
-            st.session_state.logged_in = True
-            st.session_state.username = username
-            st.success(f"Welcome, {username.capitalize()} 👋")
-            st.experimental_rerun()
-        else:
-            st.error("Invalid username or password")
 
 # ---------------------------
 # Dashboard Function
